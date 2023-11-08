@@ -1,0 +1,104 @@
+/* General styling */
+body {
+    font-family: "Swiss 911", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #1E4A8F; /* Dark blue background */
+    color: white; /* White text color */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: white; /* White button background */
+    color: #1E4A8F; /* Dark blue text color */
+    border: none;
+    cursor: pointer;
+}
+
+/* Jeopardy game board styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black; /* Black border around the table */
+    background-color: #1E4A8F; /* Dark blue background for the table */
+}
+
+th, td {
+    border: 3px solid black; /* Black border around cells */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+th {
+    background-color: #1E4A8F; /* Dark blue background for category headers */
+    color: white; /* White text color for category headers */
+    border-top: 3px solid black; /* Add a black top border to the category headers */
+    border-bottom: 3px solid black; /* Add a black bottom border to the category headers */
+}
+
+.cell {
+    background-color: #1E4A8F; /* Dark blue background for cells */
+    color: white; /* White text color for cells */
+    cursor: pointer;
+    border: 3px solid black; /* Add a black border around cells */
+}
+
+.cell:hover {
+    background-color: white; /* White background for cells on hover */
+    color: #1E4A8F; /* Dark blue text color for cells on hover */
+}
+
+/* Jeopardy game title animation */
+h1 {
+    margin-top: 20px;
+    position: relative;
+    animation: lights 2s linear infinite;
+}
+
+@keyframes lights {
+    0% {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    }
+    25% {
+        text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+    50% {
+        text-shadow: 0 0 30px white, 0 0 40px white, 0 0 50px white;
+    }
+    75% {
+        text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+    100% {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    }
+}
+
+/* Animation for the game board */
+#game-board {
+    animation: boardLights 4s linear infinite;
+}
+
+@keyframes boardLights {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.5), 0 0 60px rgba(255, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(255, 255, 0, 0.5), 0 0 80px rgba(255, 255, 0, 0.5);
+    }
+    75% {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.5), 0 0 60px rgba(255, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5);
+    }
+}
